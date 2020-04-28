@@ -14,22 +14,11 @@
               <eva-icon name="home-outline" class="center-icon" width="28" height="28"></eva-icon>
             </v-btn>
           </router-link>
-
-          <router-link to="/favoritos" class="ui-navbar__item">
-            <v-btn icon color="primary center-icon">
-              <eva-icon name="heart-outline" class="center-icon" width="28" height="28"></eva-icon>
-            </v-btn>
-          </router-link>
-
-          <router-link to="/buscador" class="ui-navbar__item">
-            <v-btn icon color="primary center-icon">
-              <eva-icon name="search-outline" class="center-icon" width="28" height="28"></eva-icon>
-            </v-btn>
-          </router-link>
         </nav>
 
         <div v-if="usuarioAutenticado">
-          <v-btn icon color="primary" class="ui-navbar__item center-icon" @click="cambiarDrawer">
+          <v-btn color="primary" text class="ui-navbar__item center-icon" @click="cambiarDrawer">
+            <span class="mr-4">{{ cuenta.detail.nickname }}</span>
             <eva-icon name="menu" class="center-icon" width="28" height="28"></eva-icon>
           </v-btn>
         </div>

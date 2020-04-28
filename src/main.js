@@ -5,6 +5,7 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 
 import './plugins/eva'
+import './plugins/carrusel'
 import './registerServiceWorker'
 import '@babel/polyfill'
 
