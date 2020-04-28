@@ -1,0 +1,52 @@
+$navbar-height = 90px;
+
+.ui-navbar {
+  align-items center
+  background #fff
+  display flex
+  height $navbar-height
+  justify-content center
+  width 100%
+
+  .center-icon {
+    display flex
+    align-items center!important
+    justify-content center!important
+  }
+
+  &__content {
+    align-items center
+    display flex
+    height $navbar-height
+    justify-content flex-start
+
+    @media (min-width 700px) {
+      margin 0
+    }
+  }
+
+  &__logo {
+    width 55px
+    height auto
+  }
+
+   &__logo--large {
+    width 300px
+    height auto
+  }
+
+  &__nav {
+    align-items center
+    display flex
+    flex-direction row
+    height $navbar-height
+    justify-content flex-end
+  }
+
+  &__item {
+    margin 0 1rem
+    &:last-child {
+      margin-right 0!important
+    }
+  }
+}
