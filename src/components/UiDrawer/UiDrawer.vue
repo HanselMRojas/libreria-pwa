@@ -31,18 +31,11 @@
         <v-list-item-title>Inicio</v-list-item-title>
       </v-list-item>
 
-      <v-list-item to="/favoritos">
+      <v-list-item to="/cuenta">
         <v-list-item-avatar>
-          <eva-icon name="heart-outline" class="center-icon"></eva-icon>
+          <eva-icon name="home-outline" class="center-icon"></eva-icon>
         </v-list-item-avatar>
-        <v-list-item-title>Favoritos</v-list-item-title>
-      </v-list-item>
-
-      <v-list-item to="/buscador">
-        <v-list-item-avatar>
-          <eva-icon name="search-outline" class="center-icon"></eva-icon>
-        </v-list-item-avatar>
-        <v-list-item-title>Buscador</v-list-item-title>
+        <v-list-item-title>Mi Cuenta</v-list-item-title>
       </v-list-item>
 
       <v-divider></v-divider>

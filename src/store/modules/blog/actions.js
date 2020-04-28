@@ -1,10 +1,16 @@
 import Blog from '../../blog'
+import { errorHandler } from '../../utils'
 
 export async function listarPublicaciones ({ commit }, query = {}) {
   try {
-    let post = await Blog.posts.browse(query)
+    const post = await Blog.posts.browse(query)
     commit('SETEAR_PUBLICACIONES', post)
   } catch (error) {
-    throw (error)
+    errorHandler(error, commit, {
+      show: true,
+      right: true,
+      bottom: true,
+      errors: {}
+    })
   }
 }

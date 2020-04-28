@@ -6,7 +6,7 @@ import { errorHandler } from '../../utils'
  */
 export async function listarCiudades ({ commit }, query = {}) {
   try {
-    let { data } = await API.leer('app/ciudades', query)
+    const { data } = await API.leer('app/ciudades', query)
     commit('CONCATENAR_CIUDADES', data.ciudades)
   } catch (error) {
     errorHandler(error, commit, {
@@ -15,7 +15,7 @@ export async function listarCiudades ({ commit }, query = {}) {
       bottom: true,
       color: 'error',
       errors: {
-        '404': 'Cotización no encontrada'
+        404: 'Cotización no encontrada'
       }
     })
   }
