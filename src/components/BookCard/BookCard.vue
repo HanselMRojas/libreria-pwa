@@ -2,7 +2,7 @@
   <v-card flat class="book">
     <v-card-text class="book__container">
       <aside class="book__img primary">
-        <eva-icon name="home-outline" class="center-icon" width="28" height="28"></eva-icon>
+        <img :src="libro.urlImagen" :alt="libro.titulo">
       </aside>
 
       <article class="book__content">

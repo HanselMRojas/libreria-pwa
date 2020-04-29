@@ -14,7 +14,7 @@
         <v-row>
           <v-col class="d-flex pa-0 pr-md-1" cols="12" md="6">
             <aside class="book__img primary">
-              <eva-icon name="home-outline" class="center-icon" width="28" height="28"></eva-icon>
+              <img :src="catalogo.libro.urlImagen" :alt="catalogo.libro.titulo">
             </aside>
           </v-col>
 
