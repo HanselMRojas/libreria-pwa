@@ -42,7 +42,51 @@ export async function crearLibro ({ commit, rootState }, libro = {}) {
     commit('DETALLE_LIBRO_DEFAULT')
     commit('ui/CAMBIAR_SNACK', {
       show: true,
+      color: 'green',
       message: 'Libro creado correctamente'
+    }, { root: true })
+  } catch (error) {
+    errorHandler(error, commit, {
+      show: true,
+      right: true,
+      bottom: true,
+      color: 'error',
+      errors: {}
+    })
+  }
+}
+
+/**
+ * Actualizar Libro
+ * Esta action llama al API para actualizar un libro dado su ID.
+ *
+ * @url /v1/biblioteca/libros/:libroId
+ * @method POST
+ */
+export async function actualizarLibro ({ commit, rootState }, libro = {}) {
+  try {
+    const { token } = rootState.cuenta
+    await API.actualizar(libro.id, 'biblioteca/libros', libro, {
+      Authorization: `Barear ${token}`
+    })
+    /**
+     * Para actualizar la lista de libros actual con los
+     * cambios realizados en el libro en contexto opté
+     * por devolver una nueva lista, a la forma de programación
+     * funcional. Pienso que es una solución elegante.
+     */
+    const listado = rootState.catalogo.libros.map(lib => {
+      const esLibroIgual = lib.id === libro.id
+      return esLibroIgual ? libro : lib
+    })
+
+    commit('LISTAR_LIBROS', listado)
+    commit('SETEAR_MODAL_DEFAULT')
+    commit('DETALLE_LIBRO_DEFAULT')
+    commit('ui/CAMBIAR_SNACK', {
+      show: true,
+      color: 'green',
+      message: `${libro.titulo} actualizado correctamente`
     }, { root: true })
   } catch (error) {
     errorHandler(error, commit, {

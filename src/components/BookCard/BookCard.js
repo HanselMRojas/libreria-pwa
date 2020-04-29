@@ -1,3 +1,4 @@
+import { mapActions } from 'vuex'
 import moment from 'moment'
 
 export default {
@@ -7,6 +8,20 @@ export default {
     },
     fecha () {
       return moment(this.libro.fechaPublicacion).format('YYYY')
+    }
+  },
+  methods: {
+    ...mapActions('catalogo', [
+      'cambiarDetalleLibro',
+      'cambiarEstadoModal'
+    ]),
+    alPresionarDetalle (libro = {}) {
+      this.cambiarDetalleLibro(libro)
+
+      this.cambiarEstadoModal({
+        esAbierto: true,
+        vista: 1
+      })
     }
   },
   props: {

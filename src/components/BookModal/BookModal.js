@@ -1,30 +1,23 @@
 import { mapActions, mapState } from 'vuex'
 
+import BookDetail from '../BookDetail/BookDetail.vue'
+import BookForm from '../BookForm/BookForm.vue'
+
 export default {
-  data: () => ({
-    autoUpdate: true,
-    isUpdating: false,
-    name: 'Midnight Crew',
-    fechador: false
-  }),
   computed: {
     ...mapState({
       catalogo: state => state.catalogo
     })
   },
+  components: {
+    BookDetail,
+    BookForm
+  },
   methods: {
     ...mapActions('catalogo', [
       'cambiarDetalleLibro',
       'cambiarEstadoModal',
-      'cambiarEstadoDefault',
-      'crearLibro'
-    ]),
-    alPulsarNuevoAutor () {
-      this.cambiarEstadoModal({ vista: 3 })
-    },
-    alPulsarGuardarLibro () {
-      const { libro } = this.catalogo
-      this.crearLibro(libro)
-    }
+      'cambiarEstadoDefault'
+    ])
   }
 }

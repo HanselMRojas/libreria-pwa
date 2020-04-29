@@ -45,7 +45,7 @@
           label="Buscar..."
         ></v-text-field>
 
-        <v-menu bottom left>
+        <v-menu bottom left v-if="usuarioAdmin">
           <template v-slot:activator="{ on }">
             <v-btn icon v-on="on">
               <v-icon>more_vert</v-icon>
