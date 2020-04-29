@@ -8,24 +8,47 @@
       paginationActiveColor="#FF5722"
       paginationColor="#9E9D9D">
 
-      <slide class="slide primary">
-        <article class="web-inner slide__content">
-          <h1 class="banner-title">¡Bienvenido!</h1>
-          <p class="banner-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus at.</p>
+      <slide class="slide">
+        <figure>
+          <img src="/img/backgrounds/pieza_1.png" alt="Pieza 1" />
+          <div class="overlay"></div>
+        </figure>
+        <article class="web-inner slide__content white--text">
+          <h1 class="banner-title">¡Hola!</h1>
+          <p class="banner-text">Te damos la bienvenida a la librería de las sombras</p>
         </article>
       </slide>
 
-      <slide class="slide red">
-        <article class="web-inner slide__content">
-          <h1 class="banner-title">¡Bienvenido!</h1>
-          <p class="banner-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus at.</p>
+      <slide class="slide">
+        <figure>
+          <img src="/img/backgrounds/pieza_2.png" alt="Pieza 2" />
+          <div class="overlay"></div>
+        </figure>
+        <article class="web-inner slide__content white--text">
+          <h1 class="banner-title">"...Las ideas son a prueba de balas..."</h1>
+          <p class="banner-text">Consigue tus mejores libros de culto de todos los tiempos.</p>
         </article>
       </slide>
 
-      <slide class="slide purple">
-        <article class="web-inner slide__content">
-          <h1 class="banner-title">¡Bienvenido!</h1>
-          <p class="banner-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus at.</p>
+      <slide class="slide">
+        <figure>
+          <img src="/img/backgrounds/pieza_3.png" alt="Pieza 3" />
+          <div class="overlay"></div>
+        </figure>
+        <article class="web-inner slide__content white--text">
+          <h1 class="banner-title">"...Winter is comming..."</h1>
+          <p class="banner-text">Consigue tus mejores sagas y completa tus colecciones</p>
+        </article>
+      </slide>
+
+      <slide class="slide">
+        <figure>
+          <img src="/img/backgrounds/pieza_4.png" alt="Pieza 4" />
+          <div class="overlay"></div>
+        </figure>
+        <article class="web-inner slide__content white--text">
+          <h1 class="banner-title">Aprovecha tu mejor tu tiempo</h1>
+          <p class="banner-text">Los mejores libros de emprendimiento para que aproveches en esta cuarentena</p>
         </article>
       </slide>
     </carousel>

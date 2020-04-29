@@ -5,7 +5,8 @@
     temporary>
     <header class="drawer-header white">
       <figure class="drawer-header__logo">
-        <v-img class="ui-navbar__logo" src="/vectores/libro.svg"></v-img>
+        <v-img class="drawer-header__img" src="/vectores/libro.svg"></v-img>
+        <h5>Librería de las sombras</h5>
       </figure>
     </header>
 
