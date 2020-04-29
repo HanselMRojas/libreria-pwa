@@ -141,6 +141,8 @@ const mutations = {
    */
   SETEAR_MODAL_DEFAULT (state) {
     state.modal = defaultState.modal
+    state.libro = defaultState.libro
+    state.autor = defaultState.autor
   }
 }
 

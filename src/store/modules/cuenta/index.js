@@ -4,6 +4,7 @@ const defaultState = {
   detail: {
     id: '',
     correo: '',
+    rol: '',
     nickname: ''
   },
   token: '',

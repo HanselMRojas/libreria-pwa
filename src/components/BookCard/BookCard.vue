@@ -28,7 +28,7 @@
     <v-divider></v-divider>
 
     <v-card-actions>
-      <v-btn text primary>
+      <v-btn text primary @click="alPresionarDetalle(libro)">
         Detalle
       </v-btn>
 

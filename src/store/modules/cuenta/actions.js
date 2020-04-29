@@ -25,6 +25,7 @@ export async function login ({ commit }, payload = {}) {
 
     commit('ui/CAMBIAR_SNACK', {
       show: true,
+      color: 'green',
       message: `Bienvenido ${data.datos.nickname}!`
     }, { root: true })
   } catch (error) {
@@ -63,6 +64,7 @@ export async function crearCuenta ({ commit }, payload = {}) {
 
     commit('ui/CAMBIAR_SNACK', {
       show: true,
+      color: 'green',
       message: `Bienvenido ${data.datos.nickname}!`
     }, { root: true })
   } catch (error) {
@@ -86,7 +88,6 @@ export async function crearCuenta ({ commit }, payload = {}) {
 export async function cerrarSesion ({ commit }) {
   commit('SETEAR_USUARIO_DEFAULT')
   commit('ui/CAMBIAR_DRAWER', {}, { root: true })
-  router.push('/login')
 }
 
 export function switchModal ({ commit }) {
