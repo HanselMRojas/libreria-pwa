@@ -5,6 +5,7 @@
         <router-link to="/">
           <v-img class="ui-navbar__logo" src="/vectores/libro.svg"></v-img>
         </router-link>
+        <h4 class="ml-4">Librería de las sombras</h4>
 
         <v-spacer></v-spacer>
 
