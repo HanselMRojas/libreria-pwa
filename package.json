@@ -9,7 +9,8 @@
     "docker-bp": "docker build -t registry.gitlab.com/hansel-m-rojas/libreria/libreria-pwa . && docker push registry.gitlab.com/hansel-m-rojas/libreria/libreria-pwa",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
-    "dev": "vue-cli-service serve"
+    "dev": "vue-cli-service serve",
+    "start": "node index.js"
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
