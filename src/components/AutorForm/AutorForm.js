@@ -15,26 +15,22 @@ export default {
   methods: {
     ...mapActions('catalogo', [
       'actualizarLibro',
-      'cambiarDetalleLibro',
+      'cambiarDetalleAutor',
       'cambiarEstadoModal',
       'cambiarEstadoDefault',
-      'crearLibro'
+      'crearAutor'
     ]),
     formatearFecha (fecha = null) {
       const formatoFecha = moment(fecha).format('YYYY-MM-DD')
       const formatoAhora = moment().format('YYYY-MM-DD')
       return fecha ? formatoFecha : formatoAhora
     },
-    alPulsarNuevoAutor () {
-      this.cambiarEstadoModal({ vista: 3, titulo: 'Crear nuevo Autor' })
+    alPulsarVolver () {
+      this.cambiarEstadoModal({ vista: 2, titulo: 'Crear libro (Admin)' })
     },
-    alPulsarGuardarLibro () {
-      const { libro } = this.catalogo
-      this.crearLibro(libro)
-    },
-    alPulsarActualizarLibro () {
-      const { libro } = this.catalogo
-      this.actualizarLibro(libro)
+    alPulsarGuardarAutor () {
+      const { autor } = this.catalogo
+      this.crearAutor(autor)
     }
   }
 }

@@ -8,6 +8,8 @@ const defaultState = {
     subtitulo: '',
     fechaPublicacion: '',
     autores: [],
+    favoritos: [],
+    reservas: [],
     numeroPaginas: 0
   },
   autor: {

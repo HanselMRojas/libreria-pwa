@@ -20,19 +20,8 @@
           <book-form></book-form>
         </v-stepper-content>
 
-        <v-stepper-content step="3">
-          <v-card
-            class="mb-12"
-            color="grey lighten-1"
-            height="200px"
-          ></v-card>
-
-          <v-btn
-            color="primary"
-            @click="catalogo.modal.vista = 3">
-            Continue
-          </v-btn>
-          <v-btn text>Cancel</v-btn>
+        <v-stepper-content step="3" class="modal__container">
+          <autor-form></autor-form>
         </v-stepper-content>
       </v-stepper-items>
     </v-stepper>

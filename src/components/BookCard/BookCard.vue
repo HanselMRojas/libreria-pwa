@@ -34,13 +34,14 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn text>
+      <v-btn text :color="colorReserva" @click="alPresionarReserva">
         <v-icon>date_range</v-icon>
-        45
+        {{ libro.reservas.length }}
       </v-btn>
 
-      <v-btn icon>
+      <v-btn text :color="colorFavorito" @click="alPresionarFavorito">
         <v-icon>favorite_border</v-icon>
+        {{ libro.favoritos.length }}
       </v-btn>
     </v-card-actions>
   </v-card>

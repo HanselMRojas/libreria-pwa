@@ -17,6 +17,9 @@ export default {
       const esAutenticado = this.cuenta.token !== ''
       const esAdmin = this.cuenta.detail.rol === 'ADMINISTRADOR'
       return esAutenticado && esAdmin
+    },
+    usuarioAutenticado () {
+      return this.cuenta.token !== ''
     }
   },
   methods: {

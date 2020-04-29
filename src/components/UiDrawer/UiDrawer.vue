@@ -32,16 +32,9 @@
         <v-list-item-title>Inicio</v-list-item-title>
       </v-list-item>
 
-      <v-list-item to="/cuenta">
-        <v-list-item-avatar>
-          <eva-icon name="home-outline" class="center-icon"></eva-icon>
-        </v-list-item-avatar>
-        <v-list-item-title>Mi Cuenta</v-list-item-title>
-      </v-list-item>
-
       <v-divider></v-divider>
 
-      <v-list-item to="/acerca">
+      <v-list-item>
         <v-list-item-avatar>
           <eva-icon name="info-outline" class="center-icon"></eva-icon>
         </v-list-item-avatar>

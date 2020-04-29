@@ -49,16 +49,6 @@
                       <v-list-item-subtitle>Editar este libro</v-list-item-subtitle>
                     </v-list-item-content>
                   </v-list-item>
-
-                  <v-list-item>
-                    <v-list-item-avatar color="red">
-                      <v-icon dark>delete</v-icon>
-                    </v-list-item-avatar>
-                    <v-list-item-content>
-                      <v-list-item-title>Eliminar</v-list-item-title>
-                      <v-list-item-subtitle>Eliminar este libro</v-list-item-subtitle>
-                    </v-list-item-content>
-                  </v-list-item>
                 </v-list>
               </template>
             </article>
@@ -71,14 +61,7 @@
 
     <v-card-actions>
       <v-spacer></v-spacer>
-      <v-btn text @click="cambiarEstadoDefault">Cancelar</v-btn>
-      <v-btn text color="primary">
-        Reservar
-        <v-icon>date_range</v-icon>
-      </v-btn>
-      <v-btn icon>
-        <v-icon>favorite_outline</v-icon>
-      </v-btn>
+      <v-btn text @click="cambiarEstadoDefault">Cerrar</v-btn>
     </v-card-actions>
   </v-card>
 </template>
