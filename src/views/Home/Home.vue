@@ -36,7 +36,7 @@
         <v-spacer></v-spacer>
 
         <v-text-field
-          v-model="search"
+          v-model="busqueda"
           clearable
           flat
           solo-inverted
@@ -44,6 +44,20 @@
           prepend-inner-icon="search"
           label="Buscar..."
         ></v-text-field>
+
+        <v-menu bottom left>
+          <template v-slot:activator="{ on }">
+            <v-btn icon v-on="on">
+              <v-icon>more_vert</v-icon>
+            </v-btn>
+          </template>
+
+          <v-list>
+            <v-list-item @click="alPulsarAgregarLibro">
+              <v-list-item-title>Agregar libro</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
       </v-toolbar>
 
       <v-container>
@@ -54,6 +68,8 @@
         </v-row>
       </v-container>
     </section>
+
+    <book-modal></book-modal>
   </section>
 </template>
 

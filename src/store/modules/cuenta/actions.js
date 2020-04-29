@@ -24,6 +24,7 @@ export async function login ({ commit }, payload = {}) {
     }
 
     commit('ui/CAMBIAR_SNACK', {
+      show: true,
       message: `Bienvenido ${data.datos.nickname}!`
     }, { root: true })
   } catch (error) {
@@ -61,6 +62,7 @@ export async function crearCuenta ({ commit }, payload = {}) {
     }
 
     commit('ui/CAMBIAR_SNACK', {
+      show: true,
       message: `Bienvenido ${data.datos.nickname}!`
     }, { root: true })
   } catch (error) {
