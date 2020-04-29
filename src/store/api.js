@@ -7,7 +7,7 @@ export class AsegurandoClient {
   constructor (config = {}) {
     this.config = Object.assign({}, {
       ssl: (PRODUCCION),
-      url: (PRODUCCION) ? 'api.hanselmrojas.com/tests/biblioteca' : 'localhost:3000',
+      url: (PRODUCCION) ? 'api.hanselmrojas.com/tests' : 'localhost:3000',
       versionApi: 'v1'
     }, config)
   }
